@@ -12,7 +12,7 @@ function generateToken(user) {
     role: user.role
   };
 
-  return jwt.sign(u, process.env.JWT_SECRET, {
+  return jwt.sign(u, 'ruge1990', {
     expiresIn: 60 * 60 // expires in 1 hours
   });
 }
