@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
     //console.log(JSON.stringify(token));
     if (!token) return next(); //if no token, continue
 
-    jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
+    jwt.verify(token, 'ruge1990', function (err, user) {
       if (err) {
         return res.status(401).json({
           error: true,
