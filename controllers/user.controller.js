@@ -51,7 +51,7 @@ exports.verify_token = (req, res) => {
     }
 
     // check token that was passed by decoding token using secret
-    jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
+    jwt.verify(token, "ruge1990", function (err, user) {
         if (err) return res.status(401).json({
             error: true,
             message: "Invalid token."
