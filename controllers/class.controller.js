@@ -128,7 +128,7 @@ exports.assign_pupil = (req, res) => {
 }
 
 exports.contain_pupil = (req, res) => {
-  if (req.user.role != "pupil") {
+  if (req.user.role != "pupil" && req.user.role != "admin" ) {
       return res.status(401).json({
           success: false,
           message: 'Invalid user to access it.'
